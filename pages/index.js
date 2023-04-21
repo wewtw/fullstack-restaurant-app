@@ -14,7 +14,7 @@ function Home() {
     const client = new ApolloClient({link,cache});
     
     const filteredQuery = query.trim().toLocaleLowerCase();
-  //last good no errors.
+  //last good no errors, test2.
     return (
         <ApolloProvider client={client}>
           <div className="search" style={{ fontSize: "2rem", marginBottom: "2rem", marginTop: "1rem" }}>
