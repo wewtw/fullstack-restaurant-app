@@ -46,6 +46,7 @@ function Drinks({ restId, searchQuery }) {
               top={true}
               style={{ height: 190, padding: 5,}}
               src={`http://localhost:1337${drink.image.url}`}
+              alt={"Image did not load"}
             />
             <CardBody>
               <CardTitle>{drink.name}</CardTitle>
