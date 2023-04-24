@@ -84,7 +84,7 @@ function RestaurantList(props) {
         <CardImg
           top={true}
           style={{ height: 200 }}
-          src={`http://localhost:1337` + restaurant.image.url}
+          src={`http://localhost:1337` + `https://3f29-173-73-87-137.ngrok-free.app` + restaurant.image.url}
         />
         <CardBody>
           <CardTitle>{restaurant.name}</CardTitle>
