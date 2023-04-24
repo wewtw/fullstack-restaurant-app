@@ -47,18 +47,18 @@ function Login(props) {
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
                 error.constructor === Object &&
-                error.message.map((error) => {
-                  return (
-                    <div
-                      key={error.messages[0].id}
-                      style={{ marginBottom: 10 }}
-                    >
-                      <small style={{ color: "red" }}>
-                        {error.messages[0].message}
-                      </small>
-                    </div>
-                  );
+                  Array.isArray(error.message) && // check if message is an array
+                  error.message.map((error) => {
+            return (
+                <div
+                    key={error.messages[0].id}
+                className="alert alert-danger"
+                >
+                {error.messages[0].message}
+              </div>
+                );
                 })}
+
               <Form>
                 <fieldset disabled={loading}>
                   <FormGroup>
