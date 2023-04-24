@@ -24,12 +24,13 @@ function Login(props) {
   const router = useRouter();
   const appContext = useContext(AppContext);
 
-  useEffect(() => {
+   useEffect(() => {
     if (appContext.isAuthenticated) {
       console.log(AppContext.user);
       router.push("/"); // redirect if you're already logged in
+      setSuccess(false);
     }
-  }, []);
+  }, [appContext.isAuthenticated]);
 
   function onChange(event) {
     updateData({ ...data, [event.target.name]: event.target.value });
