@@ -85,7 +85,7 @@ function RestaurantList(props) {
           top={true}
           style={{ height: 200 }}
           src={`https://3f29-173-73-87-137.ngrok-free.app` + restaurant.image.url} //neat trick with the dot
-          srcset={'restaurant.png'}
+          srcset={'./restaurant.png'}
           alt={"Image did not load"}
         />
         <CardBody>
