@@ -28,7 +28,7 @@ export const registerUser = (username, email, password) => {
         setTimeout(() => {
           Router.push("/");
           alert("Seccess!! Back to home page.");//easy mess
-        }, 1000);
+        }, 4000);
       })
       .catch((error) => {
         ///reject the promise and pass the error object back to the form
@@ -57,7 +57,7 @@ export const login = (identifier, password) => {
           ///redirect back to home page for restaurance selection
           Router.push("/");
           alert("Log In Seccess!");//easy mess
-        }, 1000);
+        }, 4000);
         
       })
       .catch((error) => {
