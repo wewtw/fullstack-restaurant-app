@@ -19,7 +19,7 @@ import { from } from "@apollo/client";
 function Login(props) {
   const [data, updateData] = useState({ identifier: "", password: "" });
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState([]);
+  const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
   const router = useRouter();
   const appContext = useContext(AppContext);
