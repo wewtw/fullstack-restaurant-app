@@ -53,7 +53,7 @@ import {
                 top={true}
                 style={{ height: 200 }}
                 src={`http://localhost:1337` + dish.image.url}
-                alt={"Image did not load"}
+                alt={"Image of dishes"}
               />
               <CardBody>
                 <CardTitle>{dish.name}</CardTitle>
