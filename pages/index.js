@@ -17,9 +17,10 @@ function Home() {
   //last good no errors, test2.
     return (
         <ApolloProvider client={client}>
-            <div style={{ backgroundColor: "red", color: "white", padding: "0.5rem" }}>
+            <div style={{ backgroundColor: "red", color: "white", padding: "0.1rem"}}>
               <h2>Welcome friend.</h2>
-              <p>Some features of this app like images and receipts are blocked by CORS.
+              <p style={{ backgroundColor: "red", color: "white", padding: "0.1rem" fontSize: "0.3rem" }>
+                  Some features of this app like images and receipts are blocked by CORS.
               </p>
             </div>
           <div className="search" style={{ fontSize: "2rem", marginBottom: "2rem", marginTop: "1rem" }}>
@@ -36,9 +37,9 @@ function Home() {
                 <RestaurantList search={filteredQuery} />
                 <Cart></Cart>
             </div>
-            <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.8rem" }}>
+            <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.3rem" }}>
                <p>
-                One way I found I can fix the issue with CORS I can use react hook useffect. 
+                One way I found I can fix the issue with CORS is I can use react hook useffect. 
                 However this is something I will have to address at a later time. 
                 It was not a part of our learning curriculum or the submission rubric. 
                 Thank you for understanding.
