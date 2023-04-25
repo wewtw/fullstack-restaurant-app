@@ -17,7 +17,7 @@ function Home() {
   //last good no errors, test2.
     return (
         <ApolloProvider client={client}>
-            <div style={{ backgroundColor: "red", color: "white", padding: "0.1rem"}}>
+            <div style={{ backgroundColor: "red", color: "white", padding: "0.1rem", display: "flex", justifyContent: "center", alignItems: "center"}}>
               <h2>Welcome friend.</h2>
               
             </div>
@@ -35,7 +35,7 @@ function Home() {
                 <RestaurantList search={filteredQuery} />
                 <Cart></Cart>
             </div>
-            <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.3rem" }}>
+            <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.7rem" }}>
                 <p>
                   Some features of this app like images and receipts are blocked by CORS.
               </p>
