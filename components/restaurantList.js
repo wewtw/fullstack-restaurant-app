@@ -84,13 +84,13 @@ function RestaurantList(props) {
         <CardImg
           top={true}
     
-          src={"https://firebasestorage.googleapis.com/v0/b/firetest-bd14e.appspot.com/o/restaurant.png?alt=media&token=568d0157-0054-4171-8200-8f89337cfb0a"} //neat trick with the dot
+          src={$`https://firebasestorage.googleapis.com/v0/b/firetest-bd14e.appspot.com/o/restaurant.png?alt=media&token=568d0157-0054-4171-8200-8f89337cfb0a`} //neat trick with the dot
           srcset={'./restaurant.png'}
           alt={"Image of a restaurant"}
         />
         <CardBody>
           <CardTitle>{restaurant.name}</CardTitle>
-          <CardText>{restaurant.description}</CardText>
+          <CardText>Description::{restaurant.description}</CardText>
         </CardBody>
         <div className="card-footer">
           <Button
