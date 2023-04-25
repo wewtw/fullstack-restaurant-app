@@ -50,7 +50,7 @@ function Drinks({ restId, searchQuery }) {
             />
             <CardBody>
               <CardTitle>{drink.name}</CardTitle>
-              <CardText>{drink.description}</CardText>
+              <CardText>Description::{drink.description}</CardText>
               <CardText>${drink.price}</CardText>
             </CardBody>
             <div className="card-footer" >
