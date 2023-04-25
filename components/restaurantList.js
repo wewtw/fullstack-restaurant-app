@@ -77,15 +77,15 @@ function RestaurantList(props) {
       drink.name.toLowerCase().includes(props.search)
     ),
   }));
-  ///list rendering. srcset={"restaurant.png"}
+  ///list rendering. 
   const restList = searchQuery.map((restaurant) => (
     <Col xs="6" sm="4" key={restaurant.id}>
       <Card style={{ margin: "10px 10px", color:'Black', background: "white", marginBottom: "2rem"  }}>
         <CardImg
           top={true}
-          style={{ height: 200 }}
-          src={require('./restaurant.png').default} //neat trick with the dot
-          
+    
+          src={"https://firebasestorage.googleapis.com/v0/b/firetest-bd14e.appspot.com/o/restaurant.png?alt=media&token=568d0157-0054-4171-8200-8f89337cfb0a"} //neat trick with the dot
+          srcset={'restaurant.png'}
           alt={"Image did not load"}
         />
         <CardBody>
