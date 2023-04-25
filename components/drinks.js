@@ -45,12 +45,12 @@ function Drinks({ restId, searchQuery }) {
             <CardImg
               top={true}
               style={{ height: 190, padding: 5,}}
-              src={`https://3f29-173-73-87-137.ngrok-free.app:1337${drink.image.url}`}
+              src={`https://3f29-173-73-87-137.ngrok-free.app:${drink.image.url}`}
               alt={"Image of drinks"}
             />
             <CardBody>
               <CardTitle>{drink.name}</CardTitle>
-              <CardText>Description::{drink.description}</CardText>
+              <CardText>Description:{drink.description}</CardText>
               <CardText>${drink.price}</CardText>
             </CardBody>
             <div className="card-footer" >
