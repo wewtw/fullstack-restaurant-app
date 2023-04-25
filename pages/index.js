@@ -3,7 +3,6 @@ import Cart from "../components/cart"
 import {ApolloProvider,ApolloClient,HttpLink, InMemoryCache} from '@apollo/client';
 import RestaurantList from '../components/restaurantList';
 import { InputGroup, InputGroupAddon,Input} from "reactstrap";
-import React, { useEffect } from 'react';
 
 
 function Home() {
@@ -13,18 +12,6 @@ function Home() {
     const link = new HttpLink({ uri: `${API_URL}/graphql`})
     const cache = new InMemoryCache()
     const client = new ApolloClient({link,cache});
-     useEffect(() => {
-    const url = "https://firebasestorage.googleapis.com/v0/b/firetest-bd14e.appspot.com/o/restaurant.png?alt=media&token=568d0157-0054-4171-8200-8f89337cfb0a";
-    const corsImageModified = new Image();
-    corsImageModified.crossOrigin = "Anonymous";
-    corsImageModified.src = url + "?not-from-cache-please";
-    corsImageModified.onload = function() {
-      console.log("CORS image loaded successfully");
-    };
-    corsImageModified.onerror = function() {
-      console.log("Error loading CORS image");
-    };
-  }, []);
     
     const filteredQuery = query.trim().toLocaleLowerCase();
   //last good no errors, test2.
