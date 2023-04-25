@@ -23,6 +23,8 @@ function Checkout() {
     <Row>
       <Col style={{ paddingRight: 0 }} sm={{ size: 3, order: 1, offset: 2 }}>
         <h1 style={{ margin: 20 }}>Checkout</h1>
+        <p>Do not use your real credentials here this app is for grading purposes only.</p>
+        <p>:::To check out please use our dummy card number: 4242 4242 4242 4242 04 / 24 242 42424</p>
         <Cart isAuthenticated={isAuthenticated} />
       </Col>
       <Col style={{ paddingLeft: 5 }} sm={{ size: 6, order: 2 }}>
