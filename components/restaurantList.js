@@ -84,7 +84,7 @@ function RestaurantList(props) {
         <CardImg
           top={true}
           style={{ height: 200 }}
-          src={`https://3f29-173-73-87-137.ngrok-free.app` + restaurant.image.url} //neat trick with the dot
+          src={`https://firebasestorage.googleapis.com/v0/b/firetest-bd14e.appspot.com/o/restaurant.png?alt=media&token=568d0157-0054-4171-8200-8f89337cfb0a`} //neat trick with the dot
           srcset={'./restaurant.png'}
           alt={"Image did not load"}
         />
