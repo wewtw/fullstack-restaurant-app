@@ -17,6 +17,10 @@ function Home() {
   //last good no errors, test2.
     return (
         <ApolloProvider client={client}>
+            <div style={{ backgroundColor: "red", color: "white", padding: "0.5rem" }}>
+              <h2>Welcome friend.</h>
+              <p>Some features of this app like images and receipts are blocked by CORS.<p>
+            </div>
           <div className="search" style={{ fontSize: "2rem", marginBottom: "2rem", marginTop: "1rem" }}>
               <h2>Restaurants</h2>
                 <InputGroup >
