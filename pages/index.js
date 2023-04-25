@@ -19,9 +19,7 @@ function Home() {
         <ApolloProvider client={client}>
             <div style={{ backgroundColor: "red", color: "white", padding: "0.1rem"}}>
               <h2>Welcome friend.</h2>
-              <p style={{ backgroundColor: "red", color: "white", padding: "0.1rem" fontSize: "0.3rem" }>
-                  Some features of this app like images and receipts are blocked by CORS.
-              </p>
+              
             </div>
           <div className="search" style={{ fontSize: "2rem", marginBottom: "2rem", marginTop: "1rem" }}>
               <h2>Restaurants</h2>
@@ -38,6 +36,9 @@ function Home() {
                 <Cart></Cart>
             </div>
             <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.3rem" }}>
+                <p>
+                  Some features of this app like images and receipts are blocked by CORS.
+              </p>
                <p>
                 One way I found I can fix the issue with CORS is I can use react hook useffect. 
                 However this is something I will have to address at a later time. 
