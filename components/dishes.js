@@ -57,7 +57,7 @@ import {
               />
               <CardBody>
                 <CardTitle>{dish.name}</CardTitle>
-                <CardText>{dish.description}</CardText>
+                <CardText>Description::{dish.description}</CardText>
                 <CardText>${dish.price}</CardText>
                 <Button onClick={() => addItem(dish)}>Add to cart</Button>
               </CardBody>
