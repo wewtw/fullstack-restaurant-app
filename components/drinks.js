@@ -45,8 +45,8 @@ function Drinks({ restId, searchQuery }) {
             <CardImg
               top={true}
               style={{ height: 190, padding: 5,}}
-              src={`http://localhost:1337${drink.image.url}`}
-              alt={"Image did not load"}
+              src={`https://3f29-173-73-87-137.ngrok-free.app:1337${drink.image.url}`}
+              alt={"Image of a restaurant"}
             />
             <CardBody>
               <CardTitle>{drink.name}</CardTitle>
