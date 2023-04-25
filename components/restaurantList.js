@@ -84,7 +84,7 @@ function RestaurantList(props) {
         <CardImg
           top={true}
           style={{ height: 200 }}
-          src={require('./restaurant.png').default}} //neat trick with the dot
+          src={require('./restaurant.png').default} //neat trick with the dot
           
           alt={"Image did not load"}
         />
