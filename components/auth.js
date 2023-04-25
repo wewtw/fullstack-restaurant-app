@@ -1,72 +1,71 @@
-/* /lib/auth.js */
-
 import { useEffect } from "react";
 import Router from "next/router";
 import Cookie from "js-cookie";
 import axios from "axios";
-
+const bcrypt = require("bcrypt");
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
 
 //register a new user
 export const registerUser = (username, email, password) => {
-  //prevent function from being ran on the server
   if (typeof window === "undefined") {
     return;
   }
   return new Promise((resolve, reject) => {
-    axios
-      .post(`${API_URL}/auth/local/register`, { username, email, password })
-      .then((res) => {
-         /// Store the user information in local storage
-         window.localStorage.setItem("user", JSON.stringify(res.data.user));
-        ///set token response from Strapi for server validation
-        Cookie.set("token", res.data.jwt);
-
-        ///resolve the promise to set loading to false in SignUp form
-        resolve(res);
-        ///redirect back to home page for restaurance selection
-        setTimeout(() => {
-          Router.push("/");
-          alert("Seccess!! Back to home page.");//easy mess
-        }, 4000);
-      })
-      .catch((error) => {
-        ///reject the promise and pass the error object back to the form
-        reject(error);
-      });
+    bcrypt.hash(password, 10, (err, hash) => {
+      if (err) {
+        reject(err);
+      } else {
+        axios
+          .post(`${API_URL}/auth/local/register`, { username, email, password: hash })
+          .then((res) => {
+            // Store the user information in local storage
+            window.localStorage.setItem("user", JSON.stringify(res.data.user));
+            // Set token response from Strapi for server validation
+            Cookie.set("token", res.data.jwt);
+            // Resolve the promise to set loading to false in SignUp form
+            resolve(res);
+            // Redirect back to home page for restaurant selection
+            setTimeout(() => {
+              Router.push("/");
+              alert("Success!! Back to home page."); // Easy message
+            }, 4000);
+          })
+          .catch((error) => {
+            // Reject the promise and pass the error object back to the form
+            reject(error);
+          });
+      }
+    });
   });
 };
 
 export const login = (identifier, password) => {
-  ////prevent function from being ran on the server
   if (typeof window === "undefined") {
     return;
   }
 
   return new Promise((resolve, reject) => {
     axios
-      .post(`${API_URL}/auth/local/`, { identifier, password })
-      .then((res) => {
-        window.localStorage.setItem("user", JSON.stringify(res.data.user));
-        ////set token response from Strapi for server validation
-        Cookie.set("token", res.data.jwt);
-
-        //resolve the promise to set loading to false in SignUp form
-        resolve(res);
-        setTimeout(() => {
-          ///redirect back to home page for restaurance selection
-          Router.push("/");
-          alert("Log In Seccess!");//easy mess
-        }, 4000);
-        
+      .post(`${API_URL}/auth/local/`, { identifier })
+      .then(async (res) => {
+        const match = await bcrypt.compare(password, res.data.user.password);
+        if (match) {
+          window.localStorage.setItem("user", JSON.stringify(res.data.user));
+          Cookie.set("token", res.data.jwt);
+          resolve(res);
+          setTimeout(() => {
+            Router.push("/");
+            alert("Log In Success!"); // Easy message
+          }, 4000);
+        } else {
+          reject(new Error("Invalid password"));
+        }
       })
       .catch((error) => {
-        //reject the promise and pass the error object back to the form
         reject(error);
       });
   });
 };
-
 export const logout = () => {
   //remove token and user cookie
   Cookie.remove("token");
@@ -79,7 +78,7 @@ export const logout = () => {
     Router.push("/");
     alert("Seccess!! Back to home page.");//easy mess
   });
-  
+
 };
 
 //Higher Order Component to wrap our pages and logout simultaneously logged in tabs
