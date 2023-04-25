@@ -90,7 +90,8 @@ function RestaurantList(props) {
         />
         <CardBody>
           <CardTitle>{restaurant.name}</CardTitle>
-          <CardText>Description::{restaurant.description}</CardText>
+          <br/>
+          <CardText>Description:{restaurant.description}</CardText>
         </CardBody>
         <div className="card-footer">
           <Button
