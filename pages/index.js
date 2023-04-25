@@ -3,6 +3,7 @@ import Cart from "../components/cart"
 import {ApolloProvider,ApolloClient,HttpLink, InMemoryCache} from '@apollo/client';
 import RestaurantList from '../components/restaurantList';
 import { InputGroup, InputGroupAddon,Input} from "reactstrap";
+import React, { useEffect } from 'react';
 
 
 function Home() {
