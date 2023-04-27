@@ -19,6 +19,32 @@ const Register = () => {
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(false);
   const appContext = useContext(AppContext);
+  const validateInput = () => {
+    let isValid = true;
+    const errors = {};
+
+    if (!data.username || data.username.length < 3) {
+      errors.username = 'Username must be at least 3 characters long';
+      isValid = false;
+    }
+
+    const emailRegex = /^\S+@\S+\.\S+$/;
+    if (!emailRegex.test(data.email)) {
+      errors.email = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+   
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/;
+    if (!passwordRegex.test(data.password)) {
+      errors.password = 'Password must be at least 6 characters long and contain at least one uppercase and one lowercase letter';
+      isValid = false;
+    }
+
+    setError(errors);
+    return isValid;
+  };
+
   return (
     <Container>
       <Row>
@@ -30,21 +56,14 @@ const Register = () => {
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
                 error.constructor === Object &&
-                error.message.map((error) => {
-                  return (
-                    <div
-                      key={error.messages[0].id}
-                      style={{ marginBottom: 10 }}
-                    >
-                      <small style={{ color: "red" }}>
-                        {error.messages[0].message}
-                      </small>
-                    </div>
-                  );
-                  
-                })}
-                
-              
+                Object.values(error).map((errorMessage) => (
+                  <div
+                    key={errorMessage}
+                    style={{ marginBottom: 10, color: "red" }}
+                  >
+                    {errorMessage}
+                  </div>
+                ))}
               <Form>
                 <fieldset disabled={loading}>
                   <FormGroup>
@@ -96,22 +115,24 @@ const Register = () => {
                       disabled={loading}
                       onClick={() => {
                         setLoading(true);
-                        registerUser(data.username, data.email, data.password)
-                          .then((res) => {
-                            // set authed user in global context object
-                            appContext.setUser(res.data.user);
-                            setLoading(false);
-                            console.log(`registered user: ${JSON.stringify(res.data)}`)
-                            setSuccess(true);
-                            console.log('Success state:', success);
-                           
-                          })
-                          .catch((error) => {
-                            console.log(`error in register: ${error}`)
-                            //setError(error.response.data);
-                            setLoading(false);
-                          });
-                          
+                        if (validateInput()) {
+                          registerUser(data.username, data.email, data.password)
+                            .then((res) => {
+                              // set authed user in global context object
+                              appContext.setUser(res.data.user);
+                              setLoading(false);
+                              console.log(`registered user: ${JSON.stringify(res.data)}`)
+                              setSuccess(true);
+                              console.log('Success state:', success);
+                            })
+                            .catch((error) => {
+                              console.log(`error in register: ${error}`)
+                              //setError(error.response.data);
+                              setLoading(false);
+                            });
+                        } else {
+                          setLoading(false);
+                        }
                       }}
                     >
                       
