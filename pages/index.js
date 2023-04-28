@@ -38,11 +38,13 @@ function Home() {
             <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.7rem" }}>
                 <p>
                   Some features of this app like images and receipts are blocked by CORS.
+                 I have a backup fullstack restaurant app running inside a vm on the cloud with all the features working as intended at http://159.89.92.252:3000   
+                 please visit it to verify.
               </p>
                <p>
                 One way I found I can fix the issue with CORS is I can use react hook useffect. 
                 However this is something I will have to address at a later time. 
-                It was not a part of our learning curriculum or the submission rubric. 
+                It was not a part of this projects learning curriculum or the submission rubric. 
                 Thank you for understanding.
               </p>
           </div>
