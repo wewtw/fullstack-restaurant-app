@@ -38,7 +38,7 @@ function Home() {
             <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.7rem" }}>
                 <p>
                   Some features of this app like images and receipts are blocked by CORS.
-                 I have a backup fullstack restaurant app running inside a vm on the cloud with all the features working as intended at http://159.89.92.252:3000   
+                 I have a backup fullstack restaurant app running inside a vm on the cloud with all the features working as intended at <a href="http://159.89.92.252:3000">link</a>    
                  please visit it to verify.
               </p>
                <p>
