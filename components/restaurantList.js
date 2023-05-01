@@ -84,8 +84,7 @@ function RestaurantList(props) {
         <CardImg
           top={true}
     
-          src={`https://seal-app-99zpf.ondigitalocean.app` + restaurant.image.url} //neat trick with the dot
-          srcset={'./restaurant.png'}
+          src={`https://seal-app-99zpf.ondigitalocean.app` + restaurant.image.url} 
           alt={"Image of a restaurant"}
         />
         <CardBody>
