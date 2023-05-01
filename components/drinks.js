@@ -40,7 +40,7 @@ function Drinks({ restId, searchQuery }) {
   return (
     <>
       {drinks.map((drink) => (
-        <Col xs="3" sm="4" style={{ padding: 1 }} key={drink.id}>
+        <Col xs="8" sm="4" style={{ padding: 1 }} key={drink.id}>
           <Card style={{ margin: "0 0.5rem 20px 0.5rem" , color:'blue', background: "lightgreen", marginBottom: "2rem"  }}>
             <CardImg
               top={true}
