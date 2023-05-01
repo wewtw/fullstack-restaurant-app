@@ -80,7 +80,7 @@ function RestaurantList(props) {
   ///list rendering. 
   const restList = searchQuery.map((restaurant) => (
     <Col xs="6" sm="4" key={restaurant.id}>
-      <Card style={{ margin: "10px 10px", color:'Black', background: "white", marginBottom: "2rem"  }}>
+      <Card style={{margin: "0 0.5rem 20px 0.5rem", color:'Black', background: "white" }}>
         <CardImg
           top={true}
     
