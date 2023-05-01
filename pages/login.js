@@ -60,8 +60,7 @@ function Login(props) {
               <Form>
                 <fieldset disabled={loading}>
                   <FormGroup>
-                    <p>Please enter an email or username</p>
-                    <Label>Email or Username</Label>
+                    <Label>Please enter email or Username</Label>
                     <Input
                       onChange={(event) => onChange(event)}
                       name="identifier"
