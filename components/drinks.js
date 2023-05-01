@@ -40,7 +40,7 @@ function Drinks({ restId, searchQuery }) {
   return (
     <>
       {drinks.map((drink) => (
-        <Col xs="6" sm="4" style={{ padding: 1 }} key={drink.id}>
+        <Col xs="3" sm="4" style={{ padding: 1 }} key={drink.id}>
           <Card style={{ margin: "0 0.5rem 20px 0.5rem" , color:'blue', background: "lightgreen", marginBottom: "2rem"  }}>
             <CardImg
               top={true}
@@ -50,7 +50,7 @@ function Drinks({ restId, searchQuery }) {
             />
             <CardBody>
               <CardTitle>{drink.name}</CardTitle>
-              <CardText style={{padding: "0.25rem", fontSize: "1rem" }}>Description: {drink.description}</CardText>
+              <CardText style={{fontSize: "1rem" }}>Description: {drink.description}</CardText>
               <CardText>${drink.price}</CardText>
             </CardBody>
             <div className="card-footer" >
