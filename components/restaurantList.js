@@ -79,7 +79,7 @@ function RestaurantList(props) {
   }));
   ///list rendering. 
   const restList = searchQuery.map((restaurant) => (
-    <Col xs="6" sm="4" key={restaurant.id}>
+    <Col xs="3" sm="4" key={restaurant.id}>
       <Card style={{margin: "0 0.5rem 20px 0.5rem", color:'Black', background: "white" }}>
         <CardImg
           top={true}
@@ -90,7 +90,7 @@ function RestaurantList(props) {
         <CardBody>
           <CardTitle style={{fontSize: "1.5rem"}}>{restaurant.name}</CardTitle>
           <br/>
-          <CardText style={{padding: "0.25rem", fontSize: "1rem" }}>Description:{restaurant.description}</CardText>
+          <CardText style={{fontSize: "1rem" }}>Description:{restaurant.description}</CardText>
         </CardBody>
         <div className="card-footer">
           <Button
