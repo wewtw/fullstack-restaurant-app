@@ -88,7 +88,7 @@ function RestaurantList(props) {
           alt={"Image of a restaurant"}
         />
         <CardBody>
-          <CardTitle style={{fontSize: "2rem"}}>{restaurant.name}</CardTitle>
+          <CardTitle style={{fontSize: "1.5rem"}}>{restaurant.name}</CardTitle>
           <br/>
           <CardText style={{padding: "0.25rem", fontSize: "1rem" }}>Description:{restaurant.description}</CardText>
         </CardBody>
