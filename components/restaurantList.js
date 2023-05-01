@@ -107,9 +107,9 @@ function RestaurantList(props) {
 
   return (
     <Container>
-      <Row xs="3">{restList}</Row>
-      <Row xs="3">{renderDishes()}</Row>
-      <Row xs="3">{renderDrinks()}</Row>
+      <Row>{restList}</Row>
+      <Row>{renderDishes()}</Row>
+      <Row>{renderDrinks()}</Row>
     </Container>
   );
 }
