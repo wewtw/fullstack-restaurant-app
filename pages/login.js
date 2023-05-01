@@ -45,19 +45,15 @@ function Login(props) {
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
                 error.constructor === Object &&
-                  Array.isArray(error.message) && // check if message is an array
-                  error.message.map((error) => {
-            return (
-                <div
-                    key={error.messages[0].id}
-                className="alert alert-danger"
-                >
-                {error.message}
-              </div>
-                );
+                Object.values(error).map((errorMessage) => (
+                  <div
+                    key={errorMessage}
+                    style={{ marginBottom: 10, color: "red" }}
+                  >
+                    {errorMessage}
+                  </div>
                 })}
-
-              <Form>
+               <Form>
                 <fieldset disabled={loading}>
                   <FormGroup>
                     <Label>Please enter email or Username</Label>
@@ -99,7 +95,6 @@ function Login(props) {
                           .catch((error) => {
                             setError(error.response.data);
                             setLoading(false);
-                            return <div className="alert alert-danger">{error.response.data.message}</div>;
                           });
                       }}
                     >
