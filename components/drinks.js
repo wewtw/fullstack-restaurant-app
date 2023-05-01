@@ -45,7 +45,7 @@ function Drinks({ restId, searchQuery }) {
             <CardImg
               top={true}
               style={{ height: 190, padding: 5,}}
-              src={`https://seal-app-99zpf.ondigitalocean.app` + dish.image.url}
+              src={`https://seal-app-99zpf.ondigitalocean.app` + drink.image.url}
               alt={"Image of drinks"}
             />
             <CardBody>
