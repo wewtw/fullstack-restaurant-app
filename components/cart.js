@@ -92,7 +92,7 @@ const checkoutItems = ()=>{
       {cart.items.length > 0 && (
     <div>
       <h1>Cart</h1>
-      <img className="cart-img" src="http://localhost:1337/uploads/9f236884ebcd48308522e8b27177f333.png" style={{width : 32, height: 32, }}></img>
+      <img className="cart-img" src="https://seal-app-99zpf.ondigitalocean.app/uploads/9f236884ebcd48308522e8b27177f333.png" style={{width : 32, height: 32, }}></img>
       <Card style={{ padding: "10px 5px", marginBottom: "3rem"  }} className="cart">
         <CardTitle style={{ margin: 10 }}>Your Order:</CardTitle>
         <hr />
