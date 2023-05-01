@@ -51,7 +51,7 @@ const Register = () => {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <img src="http://localhost:1337/uploads/fc3e58a3bf3f48838b17e5afdaa36a2c.png" width='64px' height='64px'/>
+              <img src="https://seal-app-99zpf.ondigitalocean.app/uploads/fc3e58a3bf3f48838b17e5afdaa36a2c.png" width='64px' height='64px'/>
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
