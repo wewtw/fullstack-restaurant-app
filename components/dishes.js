@@ -52,7 +52,7 @@ import {
               <CardImg
                 top={true}
                 style={{ height: 200 }}
-                src={`http://localhost:1337` + dish.image.url}
+                src={`https://seal-app-99zpf.ondigitalocean.app` + dish.image.url}
                 alt={"Image of dishes"}
               />
               <CardBody>
