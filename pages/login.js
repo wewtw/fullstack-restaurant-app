@@ -100,6 +100,7 @@ function Login(props) {
                           .catch((error) => {
                             setError(error.response.data);
                             setLoading(false);
+                            return <div className="alert alert-danger">{error.response.data.message}</div>;
                           });
                       }}
                     >
