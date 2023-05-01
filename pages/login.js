@@ -52,7 +52,7 @@ function Login(props) {
                     key={error.messages[0].id}
                 className="alert alert-danger"
                 >
-                {error.messages[0].message}
+                {error.message}
               </div>
                 );
                 })}
