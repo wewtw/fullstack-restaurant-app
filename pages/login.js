@@ -1,5 +1,3 @@
-/* /pages/login.js */
-
 import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import {
@@ -42,7 +40,7 @@ function Login(props) {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <img src="http://localhost:1337/uploads/1052406bc72941bb9deaed35a59da34b.png" width='64px' height='64px' padding="20px"/>
+              <img src="https://seal-app-99zpf.ondigitalocean.app/uploads/1052406bc72941bb9deaed35a59da34b.png" width='64px' height='64px' padding="20px"/>
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
