@@ -79,11 +79,11 @@ function RestaurantList(props) {
   }));
   ///list rendering. 
   const restList = searchQuery.map((restaurant) => (
-    <Col xs="8" sm="4" key={restaurant.id}>
+    <Col xs="14" sm="4" key={restaurant.id}>
       <Card style={{margin: "0 0.5rem 20px 0.5rem", color:'Black', background: "white" }}>
         <CardImg
           top={true}
-    
+          style={{ height: 200 }}
           src={`https://seal-app-99zpf.ondigitalocean.app` + restaurant.image.url} 
           alt={"Image of a restaurant"}
         />
