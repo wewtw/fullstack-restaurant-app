@@ -38,8 +38,7 @@ function Home() {
             <div style={{ backgroundColor: "red", color: "white", padding: "0.25rem", fontSize: "0.7rem" }}>
                 <p>
               
-                 I have a backup fullstack restaurant app running inside a vm on the cloud at <a href="http://159.89.92.252:3000">link</a>    
-                  if needed. Thank you.
+                 I have a backup fullstack restaurant app running inside a vm on the cloud at this<a href="http://159.89.92.252:3000"> link </a>if needed. Thank you.
               </p>
           </div>
             
