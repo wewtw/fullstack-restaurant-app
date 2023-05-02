@@ -47,7 +47,7 @@ import {
     return (
       <>
         {dishes.map((dish) => (
-          <Col xs="8" sm="4" key={dish.id}>
+          <Col xs="13" sm="4" key={dish.id}>
             <Card style={{ margin: "0 0.5rem 20px 0.5rem", background: "lightpink" }}>
               <CardImg
                 top={true}
